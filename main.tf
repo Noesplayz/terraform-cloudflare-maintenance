@@ -2,12 +2,12 @@ resource "cloudflare_workers_script" "this" {
   account_id  = var.account_id
   script_name = format("maintenance-%s", replace(var.cloudflare_zone, ".", "-"))
   content = templatefile("${path.module}/maintenance.js", {
-    company_name   = var.company_name
+    company_name   = Moeka site's
     logo_url       = var.logo_url
     favicon_url    = var.favicon_url
     image_url      = var.image_url
     font           = var.font
-    email          = var.email
+    email          = info@musaplayz.qzz.io
     info_html      = var.info_html
     statuspage_url = var.statuspage_url
     google_font    = replace(var.font, " ", "+")
